@@ -1,0 +1,586 @@
+{"type":["init_ps"],"time":["2023-04-30 15:51:15"],"user":["Jordan Reitemeyer"],"umph":[1682862675.8836],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 15:51:16"],"user":["Jordan Reitemeyer"],"umph":[1682862676.0403],"ok":[true],"chunk":[1],"ex":[1],"e.ind":[0],"code":["library(stargazer)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 15:51:16"],"user":["Jordan Reitemeyer"],"umph":[1682862676.5998],"ok":[false],"chunk":[2],"ex":[1],"e.ind":[1],"code":["\n EU_Makro <- read_csv(\"data/EU_Makro.csv\")\n\n\n"],"message":["\nYou have not yet made an assignment to eu_makro in chunk 1_a."]}
+,
+{"type":["check_ps"],"time":["2023-04-30 15:52:16"],"user":["Jordan Reitemeyer"],"umph":[1682862736.1915],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 15:52:16"],"user":["Jordan Reitemeyer"],"umph":[1682862736.8866],"ok":[true],"chunk":[2],"ex":[1],"e.ind":[0],"code":["\n eu_makro <- read_csv(\"data/EU_Makro.csv\")\n\n\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 15:52:20"],"user":["Jordan Reitemeyer"],"umph":[1682862740.3862],"ok":[true],"chunk":[3],"ex":[1],"e.ind":[0],"code":["eu_makro <- eu_makro %>%\n  mutate( debt_share_country_pro = debt_share_country * 100)\n  \ng1 <- eu_makro %>%\n  ggplot(aes(x = debt_share_country_pro, y = unempl)) + geom_point() + \n  xlab(\"Verschuldungsquote in %\") +\n  ylab(\"Arbeitslosenquote in %\")\ng1"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 15:52:20"],"user":["Jordan Reitemeyer"],"umph":[1682862740.4325],"ok":[false],"chunk":[4],"ex":[1],"e.ind":[1],"code":["reg1 <- lm(.PH_._~debt_share_country_pro, data=.PH_._)\nsummary(.PH_._)\n\n# enter your code here ...\n\n\n# enter your code here ...\n"],"message":["\nYou have not made a correct assignment to reg1 in chunk 1_b."]}
+,
+{"type":["check_ps"],"time":["2023-04-30 15:57:26"],"user":["Jordan Reitemeyer"],"umph":[1682863046.2494],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 15:57:26"],"user":["Jordan Reitemeyer"],"umph":[1682863046.329],"ok":[true],"chunk":[4],"ex":[1],"e.ind":[0],"code":["reg1 <- lm(unempl~debt_share_country_pro, data=eu_makro)\nsummary(reg1)\n\n# enter your code here ...\n\n\n# enter your code here ...\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 15:57:26"],"user":["Jordan Reitemeyer"],"umph":[1682863046.3574],"ok":[false],"chunk":[5],"ex":[1],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 1_c."]}
+,
+{"type":["check_ps"],"time":["2023-04-30 16:05:03"],"user":["Jordan Reitemeyer"],"umph":[1682863503.8294],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 16:05:03"],"user":["Jordan Reitemeyer"],"umph":[1682863503.8786],"ok":[false],"chunk":[5],"ex":[1],"e.ind":[1],"code":["sreg1 <- summary(reg1)\n\n #sreg1$coefficients[1][1] # beta0\n\nround(sreg1$coefficients[1][1],3)\n"],"message":["\nOk, in chunk 1_c your command\n\n    round(sreg1$coefficients[1][1], 3)\n\nindeed yields the correct result. But you shall directly use the function '6.895', by just writing \n\n    6.895\n\nPlease change your code."]}
+,
+{"type":["check_ps"],"time":["2023-04-30 16:06:01"],"user":["Jordan Reitemeyer"],"umph":[1682863561.9305],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 16:06:01"],"user":["Jordan Reitemeyer"],"umph":[1682863561.9855],"ok":[false],"chunk":[5],"ex":[1],"e.ind":[1],"code":["sreg1 <- summary(reg1)\n\n #sreg1$coefficients[1][1] # beta0\n\nround(6.895,3)\n"],"message":["\nOk, in chunk 1_c your command\n\n    round(6.895, 3)\n\nindeed yields the correct result. But you shall directly use the function '6.895', by just writing \n\n    6.895\n\nPlease change your code."]}
+,
+{"type":["check_ps"],"time":["2023-04-30 16:06:28"],"user":["Jordan Reitemeyer"],"umph":[1682863588.3756],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 16:06:28"],"user":["Jordan Reitemeyer"],"umph":[1682863588.4252],"ok":[true],"chunk":[5],"ex":[1],"e.ind":[0],"code":["sreg1 <- summary(reg1)\n\n #sreg1$coefficients[1][1] # beta0\n\n6.895\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 16:06:28"],"user":["Jordan Reitemeyer"],"umph":[1682863588.4449],"ok":[false],"chunk":[6],"ex":[1],"e.ind":[1],"code":["\n# enter your code here ...\n\n\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 1_d."]}
+,
+{"type":["check_ps"],"time":["2023-04-30 16:09:15"],"user":["Jordan Reitemeyer"],"umph":[1682863755.4975],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 16:09:15"],"user":["Jordan Reitemeyer"],"umph":[1682863755.5458],"ok":[true],"chunk":[5],"ex":[1],"e.ind":[0],"code":["# sreg1 <- summary(reg1)\n# sreg1$coefficients[1][1] # beta0 ellegantere Lösung\n\n6.895\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 16:09:15"],"user":["Jordan Reitemeyer"],"umph":[1682863755.5643],"ok":[false],"chunk":[6],"ex":[1],"e.ind":[1],"code":["\n# enter your code here ...\nb0 = reg1$coefficients[1][1]\nb1 = reg1$coefficients[2][1]\n\n\n"],"message":["\nYou have not yet entered all correct commands in chunk 1_d."]}
+,
+{"type":["check_ps"],"time":["2023-04-30 16:10:15"],"user":["Jordan Reitemeyer"],"umph":[1682863815.2495],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 16:10:15"],"user":["Jordan Reitemeyer"],"umph":[1682863815.2888],"ok":[false],"chunk":[6],"ex":[1],"e.ind":[1],"code":["\n\nb0 = reg1$coef[1][1]\nb1 = reg1$coef[2][1]\n\n\n"],"message":["\nYou have not yet entered all correct commands in chunk 1_d."]}
+,
+{"type":["hint"],"time":["2023-04-30 16:10:27"],"user":["Jordan Reitemeyer"],"umph":[1682863827.7645],"ok":[true],"chunk":[6],"ex":[1],"e.ind":[1]}
+,
+{"type":["check_ps"],"time":["2023-04-30 16:11:12"],"user":["Jordan Reitemeyer"],"umph":[1682863872.5785],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 16:11:12"],"user":["Jordan Reitemeyer"],"umph":[1682863872.6394],"ok":[false],"chunk":[6],"ex":[1],"e.ind":[1],"code":["\nb0 <- coef(reg1)[1]\nb1 <- coef(reg1)[2]\n"],"message":["\nYou have not yet entered all correct commands in chunk 1_d."]}
+,
+{"type":["hint"],"time":["2023-04-30 16:11:43"],"user":["Jordan Reitemeyer"],"umph":[1682863903.3622],"ok":[true],"chunk":[6],"ex":[1],"e.ind":[1]}
+,
+{"type":["hint"],"time":["2023-04-30 16:11:56"],"user":["Jordan Reitemeyer"],"umph":[1682863916.1015],"ok":[true],"chunk":[6],"ex":[1],"e.ind":[1]}
+,
+{"type":["hint"],"time":["2023-04-30 16:11:57"],"user":["Jordan Reitemeyer"],"umph":[1682863917.5423],"ok":[true],"chunk":[6],"ex":[1],"e.ind":[1]}
+,
+{"type":["hint"],"time":["2023-04-30 16:11:57"],"user":["Jordan Reitemeyer"],"umph":[1682863917.9179],"ok":[true],"chunk":[6],"ex":[1],"e.ind":[1]}
+,
+{"type":["hint"],"time":["2023-04-30 16:11:58"],"user":["Jordan Reitemeyer"],"umph":[1682863918.1901],"ok":[true],"chunk":[6],"ex":[1],"e.ind":[1]}
+,
+{"type":["hint"],"time":["2023-04-30 16:11:59"],"user":["Jordan Reitemeyer"],"umph":[1682863919.7348],"ok":[true],"chunk":[6],"ex":[1],"e.ind":[1]}
+,
+{"type":["hint"],"time":["2023-04-30 16:11:59"],"user":["Jordan Reitemeyer"],"umph":[1682863919.9423],"ok":[true],"chunk":[6],"ex":[1],"e.ind":[1]}
+,
+{"type":["hint"],"time":["2023-04-30 16:12:00"],"user":["Jordan Reitemeyer"],"umph":[1682863920.1892],"ok":[true],"chunk":[6],"ex":[1],"e.ind":[1]}
+,
+{"type":["hint"],"time":["2023-04-30 16:12:00"],"user":["Jordan Reitemeyer"],"umph":[1682863920.4291],"ok":[true],"chunk":[6],"ex":[1],"e.ind":[1]}
+,
+{"type":["hint"],"time":["2023-04-30 16:12:00"],"user":["Jordan Reitemeyer"],"umph":[1682863920.7463],"ok":[true],"chunk":[6],"ex":[1],"e.ind":[1]}
+,
+{"type":["hint"],"time":["2023-04-30 16:12:01"],"user":["Jordan Reitemeyer"],"umph":[1682863921.0056],"ok":[true],"chunk":[6],"ex":[1],"e.ind":[1]}
+,
+{"type":["check_ps"],"time":["2023-04-30 16:13:11"],"user":["Jordan Reitemeyer"],"umph":[1682863991.6842],"ok":[true]}
+,
+{"type":["hint"],"time":["2023-04-30 16:13:11"],"user":["Jordan Reitemeyer"],"umph":[1682863991.7222],"ok":[true],"chunk":[6],"ex":[1],"e.ind":[0]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 16:13:11"],"user":["Jordan Reitemeyer"],"umph":[1682863991.7561],"ok":[true],"chunk":[6],"ex":[1],"e.ind":[0],"code":["coef(reg1)\n\nb0 <- coef(reg1)[1]\nb1 <- coef(reg1)[2]\nhint()\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 16:13:11"],"user":["Jordan Reitemeyer"],"umph":[1682863991.776],"ok":[false],"chunk":[7],"ex":[1],"e.ind":[0],"code":["g2 <- g1 + geom_abline(intercept=.PH_._,slope=.PH_._,colour=\".PH_._\")\n\n# enter your code here ...\n\ng2"],"message":["evaluation error in \n  g2 <- g1 + geom_abline(intercept = ___, slope = ___, colour = \"___\")\n  Error in geom_abline(intercept = ___, slope = ___, colour = \"___\"): object '___' not found\n"]}
+,
+{"type":["hint"],"time":["2023-04-30 16:15:32"],"user":["Jordan Reitemeyer"],"umph":[1682864132.8105],"ok":[true],"chunk":[7],"ex":[1],"e.ind":[0]}
+,
+{"type":["hint"],"time":["2023-04-30 16:16:39"],"user":["Jordan Reitemeyer"],"umph":[1682864199.4759],"ok":[true],"chunk":[7],"ex":[1],"e.ind":[0]}
+,
+{"type":["hint"],"time":["2023-04-30 16:18:46"],"user":["Jordan Reitemeyer"],"umph":[1682864326.4814],"ok":[true],"chunk":[7],"ex":[1],"e.ind":[0]}
+,
+{"type":["check_ps"],"time":["2023-04-30 16:19:06"],"user":["Jordan Reitemeyer"],"umph":[1682864346.0266],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 16:19:06"],"user":["Jordan Reitemeyer"],"umph":[1682864346.1296],"ok":[true],"chunk":[6],"ex":[1],"e.ind":[0],"code":["coef(reg1)\n\nb0 <- coef(reg1)[1]\nb1 <- coef(reg1)[2]\n\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 16:19:06"],"user":["Jordan Reitemeyer"],"umph":[1682864346.6079],"ok":[true],"chunk":[7],"ex":[1],"e.ind":[0],"code":["g2 <- g1 + geom_abline(intercept=b0,slope= b1,colour=\"blue\")\n\n\n\ng2"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 16:19:06"],"user":["Jordan Reitemeyer"],"umph":[1682864346.6307],"ok":[false],"chunk":[8],"ex":[1],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 1_g."]}
+,
+{"type":["check_ps"],"time":["2023-04-30 16:19:16"],"user":["Jordan Reitemeyer"],"umph":[1682864356.9517],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 16:19:16"],"user":["Jordan Reitemeyer"],"umph":[1682864356.9859],"ok":[false],"chunk":[8],"ex":[1],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 1_g."]}
+,
+{"type":["hint"],"time":["2023-04-30 16:22:27"],"user":["Jordan Reitemeyer"],"umph":[1682864547.623],"ok":[true],"chunk":[8],"ex":[1],"e.ind":[1]}
+,
+{"type":["hint"],"time":["2023-04-30 16:23:16"],"user":["Jordan Reitemeyer"],"umph":[1682864596.7203],"ok":[true],"chunk":[8],"ex":[1],"e.ind":[1]}
+,
+{"type":["hint"],"time":["2023-04-30 16:23:54"],"user":["Jordan Reitemeyer"],"umph":[1682864634.9188],"ok":[true],"chunk":[8],"ex":[1],"e.ind":[1]}
+,
+{"type":["hint"],"time":["2023-04-30 16:24:35"],"user":["Jordan Reitemeyer"],"umph":[1682864675.9455],"ok":[true],"chunk":[8],"ex":[1],"e.ind":[1]}
+,
+{"type":["check_ps"],"time":["2023-04-30 16:25:35"],"user":["Jordan Reitemeyer"],"umph":[1682864735.8086],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 16:25:35"],"user":["Jordan Reitemeyer"],"umph":[1682864735.8596],"ok":[true],"chunk":[8],"ex":[1],"e.ind":[0],"code":["cor(eu_makro$debt_share_country_pro,eu_makro$unempl, use = \"pairwise.complete.obs\")\n\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 16:25:35"],"user":["Jordan Reitemeyer"],"umph":[1682864735.9985],"ok":[true],"chunk":[9],"ex":[2],"e.ind":[0],"code":["set.seed(1)\nT <-  20 # Zahl der Beobachtungen\nbeta0 <- 10; beta1 <- 2;\nu <- rnorm(T,0,3) # Normalverteilte Stoergroesse\nu\nx <- runif(T,0,4) # gleichverteilte x zwischen 0 und 4\nx\ny <- beta0 + beta1*x + u\ny"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 16:25:36"],"user":["Jordan Reitemeyer"],"umph":[1682864736.0302],"ok":[false],"chunk":[10],"ex":[2],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 2_a_2."]}
+,
+{"type":["check_ps"],"time":["2023-04-30 16:25:42"],"user":["Jordan Reitemeyer"],"umph":[1682864742.9688],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 16:25:43"],"user":["Jordan Reitemeyer"],"umph":[1682864743.057],"ok":[false],"chunk":[10],"ex":[2],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 2_a_2."]}
+,
+{"type":["check_ps"],"time":["2023-04-30 16:57:53"],"user":["Jordan Reitemeyer"],"umph":[1682866673.3996],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 16:57:53"],"user":["Jordan Reitemeyer"],"umph":[1682866673.5304],"ok":[true],"chunk":[10],"ex":[2],"e.ind":[0],"code":["\n2\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 16:57:53"],"user":["Jordan Reitemeyer"],"umph":[1682866673.5695],"ok":[false],"chunk":[11],"ex":[2],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 2_a_3."]}
+,
+{"type":["check_ps"],"time":["2023-04-30 16:59:33"],"user":["Jordan Reitemeyer"],"umph":[1682866773.9992],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 16:59:34"],"user":["Jordan Reitemeyer"],"umph":[1682866774.0542],"ok":[true],"chunk":[11],"ex":[2],"e.ind":[0],"code":["lm(y~x)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 16:59:34"],"user":["Jordan Reitemeyer"],"umph":[1682866774.0811],"ok":[true],"chunk":[12],"ex":[2],"e.ind":[0],"code":["simulate.and.estimate <- function(T=20, beta0 = 10, beta1=2) {\n  u <- rnorm(T,0,3) # Normalverteilte Stoergroesse\n  x <- runif(T,0,4) # gleichverteilte x zwischen 0 und 4\n  y <- beta0 + beta1*x + u\n  # Anmerkung lm.fit lauft schneller als\n  # lm, hat aber keinen so schoenen Syntax\n  reg <- lm.fit(x=cbind(1,x),y=y)\n  coef(reg)[2]\n}\nsimulate.and.estimate()\nsimulate.and.estimate()\nsimulate.and.estimate()"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 16:59:34"],"user":["Jordan Reitemeyer"],"umph":[1682866774.106],"ok":[false],"chunk":[13],"ex":[2],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 2_b_2."]}
+,
+{"type":["check_ps"],"time":["2023-04-30 17:00:57"],"user":["Jordan Reitemeyer"],"umph":[1682866857.5319],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:00:57"],"user":["Jordan Reitemeyer"],"umph":[1682866857.5678],"ok":[true],"chunk":[1],"ex":[1],"e.ind":[0],"code":["library(stargazer)\nlibrary(readr)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:00:57"],"user":["Jordan Reitemeyer"],"umph":[1682866857.9462],"ok":[true],"chunk":[2],"ex":[1],"e.ind":[0],"code":["\n eu_makro <- read_csv(\"data/EU_Makro.csv\")\n\n\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:00:58"],"user":["Jordan Reitemeyer"],"umph":[1682866858.3119],"ok":[true],"chunk":[3],"ex":[1],"e.ind":[0],"code":["eu_makro <- eu_makro %>%\n  mutate( debt_share_country_pro = debt_share_country * 100)\n  \ng1 <- eu_makro %>%\n  ggplot(aes(x = debt_share_country_pro, y = unempl)) + geom_point() + \n  xlab(\"Verschuldungsquote in %\") +\n  ylab(\"Arbeitslosenquote in %\")\ng1"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:00:58"],"user":["Jordan Reitemeyer"],"umph":[1682866858.3565],"ok":[true],"chunk":[4],"ex":[1],"e.ind":[0],"code":["reg1 <- lm(unempl~debt_share_country_pro, data=eu_makro)\nsummary(reg1)\n\n# enter your code here ...\n\n\n# enter your code here ...\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:00:58"],"user":["Jordan Reitemeyer"],"umph":[1682866858.834],"ok":[true],"chunk":[5],"ex":[1],"e.ind":[0],"code":["# sreg1 <- summary(reg1)\n# sreg1$coefficients[1][1] # beta0 ellegantere Lösung\n\n6.895\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:00:58"],"user":["Jordan Reitemeyer"],"umph":[1682866858.8785],"ok":[true],"chunk":[6],"ex":[1],"e.ind":[0],"code":["coef(reg1)\n\nb0 <- coef(reg1)[1]\nb1 <- coef(reg1)[2]\n\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:00:59"],"user":["Jordan Reitemeyer"],"umph":[1682866859.231],"ok":[true],"chunk":[7],"ex":[1],"e.ind":[0],"code":["g2 <- g1 + geom_abline(intercept=b0,slope= b1,colour=\"blue\")\n\n\n\ng2"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:00:59"],"user":["Jordan Reitemeyer"],"umph":[1682866859.2468],"ok":[true],"chunk":[8],"ex":[1],"e.ind":[0],"code":["cor(eu_makro$debt_share_country_pro,eu_makro$unempl, use = \"pairwise.complete.obs\")\n\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:00:59"],"user":["Jordan Reitemeyer"],"umph":[1682866859.2647],"ok":[false],"chunk":[13],"ex":[2],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 2_b_2."]}
+,
+{"type":["check_ps"],"time":["2023-04-30 17:03:17"],"user":["Jordan Reitemeyer"],"umph":[1682866997.908],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:03:17"],"user":["Jordan Reitemeyer"],"umph":[1682866997.932],"ok":[false],"chunk":[13],"ex":[2],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 2_b_2."]}
+,
+{"type":["check_ps"],"time":["2023-04-30 17:03:26"],"user":["Jordan Reitemeyer"],"umph":[1682867006.3221],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:03:26"],"user":["Jordan Reitemeyer"],"umph":[1682867006.3471],"ok":[false],"chunk":[13],"ex":[2],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 2_b_2."]}
+,
+{"type":["check_ps"],"time":["2023-04-30 17:05:04"],"user":["Jordan Reitemeyer"],"umph":[1682867104.1514],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:05:04"],"user":["Jordan Reitemeyer"],"umph":[1682867104.2783],"ok":[true],"chunk":[4],"ex":[1],"e.ind":[0],"code":["reg1 <- lm(unempl~debt_share_country_pro, data=eu_makro)\nsummary(reg1)\n\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:05:04"],"user":["Jordan Reitemeyer"],"umph":[1682867104.3104],"ok":[true],"chunk":[5],"ex":[1],"e.ind":[0],"code":["# sreg1 <- summary(reg1)\n# sreg1$coefficients[1][1] # beta0 ellegantere Lösung\n\n6.895\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:05:04"],"user":["Jordan Reitemeyer"],"umph":[1682867104.3831],"ok":[true],"chunk":[6],"ex":[1],"e.ind":[0],"code":["coef(reg1)\n\nb0 <- coef(reg1)[1]\nb1 <- coef(reg1)[2]\n\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:05:05"],"user":["Jordan Reitemeyer"],"umph":[1682867105.0094],"ok":[true],"chunk":[7],"ex":[1],"e.ind":[0],"code":["g2 <- g1 + geom_abline(intercept=b0,slope= b1,colour=\"blue\")\n\n\n\ng2"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:05:05"],"user":["Jordan Reitemeyer"],"umph":[1682867105.038],"ok":[true],"chunk":[8],"ex":[1],"e.ind":[0],"code":["cor(eu_makro$debt_share_country_pro,eu_makro$unempl, use = \"pairwise.complete.obs\")\n\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:05:05"],"user":["Jordan Reitemeyer"],"umph":[1682867105.0705],"ok":[true],"chunk":[13],"ex":[2],"e.ind":[0],"code":["\n2.\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:05:05"],"user":["Jordan Reitemeyer"],"umph":[1682867105.0968],"ok":[false],"chunk":[14],"ex":[2],"e.ind":[0],"code":[".PH_.__ <- .PH_.__(.PH_.__,simulate.and.estimate())\n\n# enter your code here ...\n"],"message":["evaluation error in \n  ____ <- ____(____, simulate.and.estimate())\n  Error in ____(____, simulate.and.estimate()): could not find function \"____\"\n"]}
+,
+{"type":["check_ps"],"time":["2023-04-30 17:07:37"],"user":["Jordan Reitemeyer"],"umph":[1682867257.4148],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:07:37"],"user":["Jordan Reitemeyer"],"umph":[1682867257.4629],"ok":[true],"chunk":[1],"ex":[1],"e.ind":[0],"code":["library(stargazer)\nlibrary(readr)\nlibrary(\"dplyr\")"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:07:38"],"user":["Jordan Reitemeyer"],"umph":[1682867258.2497],"ok":[true],"chunk":[2],"ex":[1],"e.ind":[0],"code":["\n eu_makro <- read_csv(\"data/EU_Makro.csv\")\n\n\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:07:38"],"user":["Jordan Reitemeyer"],"umph":[1682867258.7207],"ok":[true],"chunk":[3],"ex":[1],"e.ind":[0],"code":["\neu_makro <- eu_makro %>%\n  mutate( debt_share_country_pro = debt_share_country * 100)\n  \ng1 <- eu_makro %>%\n  ggplot(aes(x = debt_share_country_pro, y = unempl)) + geom_point() + \n  xlab(\"Verschuldungsquote in %\") +\n  ylab(\"Arbeitslosenquote in %\")\ng1\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:07:38"],"user":["Jordan Reitemeyer"],"umph":[1682867258.7657],"ok":[true],"chunk":[4],"ex":[1],"e.ind":[0],"code":["reg1 <- lm(unempl~debt_share_country_pro, data=eu_makro)\nsummary(reg1)\n\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:07:38"],"user":["Jordan Reitemeyer"],"umph":[1682867258.7989],"ok":[true],"chunk":[5],"ex":[1],"e.ind":[0],"code":["# sreg1 <- summary(reg1)\n# sreg1$coefficients[1][1] # beta0 ellegantere Lösung\n\n6.895\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:07:39"],"user":["Jordan Reitemeyer"],"umph":[1682867259.52],"ok":[true],"chunk":[6],"ex":[1],"e.ind":[0],"code":["coef(reg1)\n\nb0 <- coef(reg1)[1]\nb1 <- coef(reg1)[2]\n\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:07:40"],"user":["Jordan Reitemeyer"],"umph":[1682867260.0653],"ok":[true],"chunk":[7],"ex":[1],"e.ind":[0],"code":["g2 <- g1 + geom_abline(intercept=b0,slope= b1,colour=\"blue\")\n\n\n\ng2"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:07:40"],"user":["Jordan Reitemeyer"],"umph":[1682867260.0841],"ok":[true],"chunk":[8],"ex":[1],"e.ind":[0],"code":["cor(eu_makro$debt_share_country_pro,eu_makro$unempl, use = \"pairwise.complete.obs\")\n\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:07:40"],"user":["Jordan Reitemeyer"],"umph":[1682867260.6758],"ok":[false],"chunk":[14],"ex":[2],"e.ind":[0],"code":[".PH_.__ <- .PH_.__(.PH_.__,simulate.and.estimate())\n\n# enter your code here ...\n"],"message":["evaluation error in \n  ____ <- ____(____, simulate.and.estimate())\n  Error in ____(____, simulate.and.estimate()): could not find function \"____\"\n"]}
+,
+{"type":["check_ps"],"time":["2023-04-30 17:13:13"],"user":["Jordan Reitemeyer"],"umph":[1682867593.488],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:13:13"],"user":["Jordan Reitemeyer"],"umph":[1682867593.5373],"ok":[true],"chunk":[1],"ex":[1],"e.ind":[0],"code":["library(stargazer)\nlibrary(readr)\nlibrary(\"dplyr\")\nlibrary(\"ggplot2\")\nlibrary(\"tidyverse\")\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:13:13"],"user":["Jordan Reitemeyer"],"umph":[1682867593.988],"ok":[true],"chunk":[2],"ex":[1],"e.ind":[0],"code":["\n eu_makro <- read_csv(\"data/EU_Makro.csv\")\n\n\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:13:14"],"user":["Jordan Reitemeyer"],"umph":[1682867594.0054],"ok":[true],"chunk":[3],"ex":[1],"e.ind":[0],"code":["\neu_makro <- eu_makro %>%\n  mutate( debt_share_country_pro = debt_share_country * 100)\n  \ng1 <- eu_makro %>%\n  ggplot(aes(x = debt_share_country_pro, y = unempl)) + geom_point() + \n  xlab(\"Verschuldungsquote in %\") +\n  ylab(\"Arbeitslosenquote in %\")\ng1\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:13:14"],"user":["Jordan Reitemeyer"],"umph":[1682867594.0429],"ok":[true],"chunk":[4],"ex":[1],"e.ind":[0],"code":["reg1 <- lm(unempl~debt_share_country_pro, data=eu_makro)\nsummary(reg1)\n\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:13:14"],"user":["Jordan Reitemeyer"],"umph":[1682867594.1052],"ok":[true],"chunk":[5],"ex":[1],"e.ind":[0],"code":["# sreg1 <- summary(reg1)\n# sreg1$coefficients[1][1] # beta0 ellegantere Lösung\n\n6.895\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:13:14"],"user":["Jordan Reitemeyer"],"umph":[1682867594.162],"ok":[true],"chunk":[6],"ex":[1],"e.ind":[0],"code":["coef(reg1)\n\nb0 <- coef(reg1)[1]\nb1 <- coef(reg1)[2]\n\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:13:14"],"user":["Jordan Reitemeyer"],"umph":[1682867594.1782],"ok":[false],"chunk":[7],"ex":[1],"e.ind":[0],"code":["g2 <- g1 + geom_abline(intercept=b0,slope= b1,colour=\"blue\")\n\n\n\ng2"],"message":["evaluation error in \n  g2 <- g1 + geom_abline(intercept = b0, slope = b1, colour = \"blue\")\n  Error:  object 'g1' not found\n"]}
+,
+{"type":["check_ps"],"time":["2023-04-30 17:15:18"],"user":["Jordan Reitemeyer"],"umph":[1682867718.1769],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:15:19"],"user":["Jordan Reitemeyer"],"umph":[1682867719.39],"ok":[true],"chunk":[14],"ex":[2],"e.ind":[0],"code":["sim.beta1 <- replicate(5000,simulate.and.estimate())\n\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:15:19"],"user":["Jordan Reitemeyer"],"umph":[1682867719.4621],"ok":[false],"chunk":[15],"ex":[2],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 2_c_2."]}
+,
+{"type":["check_ps"],"time":["2023-04-30 17:16:48"],"user":["Jordan Reitemeyer"],"umph":[1682867808.8159],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:16:49"],"user":["Jordan Reitemeyer"],"umph":[1682867809.0161],"ok":[true],"chunk":[15],"ex":[2],"e.ind":[0],"code":["\nhist(sim.beta1)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:16:49"],"user":["Jordan Reitemeyer"],"umph":[1682867809.064],"ok":[true],"chunk":[16],"ex":[2],"e.ind":[0],"code":["ggplot(mapping=aes(x=sim.beta1)) + geom_density(fill=\"blue\", alpha=0.5) + geom_vline(xintercept = 2)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:16:49"],"user":["Jordan Reitemeyer"],"umph":[1682867809.1109],"ok":[false],"chunk":[17],"ex":[2],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 2_d."]}
+,
+{"type":["check_ps"],"time":["2023-04-30 17:19:20"],"user":["Jordan Reitemeyer"],"umph":[1682867960.3935],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:19:20"],"user":["Jordan Reitemeyer"],"umph":[1682867960.4998],"ok":[true],"chunk":[13],"ex":[2],"e.ind":[0],"code":["\n2\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:19:22"],"user":["Jordan Reitemeyer"],"umph":[1682867962.5247],"ok":[true],"chunk":[14],"ex":[2],"e.ind":[0],"code":["sim.beta1 <- replicate(5000,simulate.and.estimate())\n\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:19:22"],"user":["Jordan Reitemeyer"],"umph":[1682867962.7835],"ok":[true],"chunk":[15],"ex":[2],"e.ind":[0],"code":["\nhist(sim.beta1)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:19:22"],"user":["Jordan Reitemeyer"],"umph":[1682867962.8093],"ok":[true],"chunk":[16],"ex":[2],"e.ind":[0],"code":["ggplot(mapping=aes(x=sim.beta1)) + geom_density(fill=\"blue\", alpha=0.5) + geom_vline(xintercept = 2)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:19:23"],"user":["Jordan Reitemeyer"],"umph":[1682867963.0182],"ok":[true],"chunk":[17],"ex":[2],"e.ind":[0],"code":["\nsd(sim.beta1)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:19:23"],"user":["Jordan Reitemeyer"],"umph":[1682867963.1267],"ok":[false],"chunk":[18],"ex":[2],"e.ind":[2],"code":["reg1 <-  lm(y~x)\n\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 2_e."]}
+,
+{"type":["hint"],"time":["2023-04-30 17:21:12"],"user":["Jordan Reitemeyer"],"umph":[1682868072.4295],"ok":[true],"chunk":[18],"ex":[2],"e.ind":[2]}
+,
+{"type":["check_ps"],"time":["2023-04-30 17:23:01"],"user":["Jordan Reitemeyer"],"umph":[1682868181.5627],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:23:01"],"user":["Jordan Reitemeyer"],"umph":[1682868181.635],"ok":[true],"chunk":[13],"ex":[2],"e.ind":[0],"code":["\nsummary(lm(y~x) )\n2\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:23:03"],"user":["Jordan Reitemeyer"],"umph":[1682868183.2842],"ok":[true],"chunk":[14],"ex":[2],"e.ind":[0],"code":["sim.beta1 <- replicate(5000,simulate.and.estimate())\n\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:23:03"],"user":["Jordan Reitemeyer"],"umph":[1682868183.4139],"ok":[true],"chunk":[15],"ex":[2],"e.ind":[0],"code":["\nhist(sim.beta1)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:23:03"],"user":["Jordan Reitemeyer"],"umph":[1682868183.43],"ok":[true],"chunk":[16],"ex":[2],"e.ind":[0],"code":["ggplot(mapping=aes(x=sim.beta1)) + geom_density(fill=\"blue\", alpha=0.5) + geom_vline(xintercept = 2)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:23:03"],"user":["Jordan Reitemeyer"],"umph":[1682868183.441],"ok":[true],"chunk":[17],"ex":[2],"e.ind":[0],"code":["\nsd(sim.beta1)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:23:03"],"user":["Jordan Reitemeyer"],"umph":[1682868183.4722],"ok":[false],"chunk":[18],"ex":[2],"e.ind":[2],"code":["reg1 <-  lm(y~x)\n\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 2_e."]}
+,
+{"type":["hint"],"time":["2023-04-30 17:23:48"],"user":["Jordan Reitemeyer"],"umph":[1682868228.5948],"ok":[true],"chunk":[18],"ex":[2],"e.ind":[2]}
+,
+{"type":["check_ps"],"time":["2023-04-30 17:24:25"],"user":["Jordan Reitemeyer"],"umph":[1682868265.6648],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:24:25"],"user":["Jordan Reitemeyer"],"umph":[1682868265.7514],"ok":[false],"chunk":[13],"ex":[2],"e.ind":[0],"code":["\nsummary(reg1)\n"],"message":["evaluation error in \n  summary(reg1)\n  Error in summary(reg1): object 'reg1' not found\n"]}
+,
+{"type":["hint"],"time":["2023-04-30 17:25:27"],"user":["Jordan Reitemeyer"],"umph":[1682868327.4589],"ok":[true],"chunk":[13],"ex":[2],"e.ind":[0]}
+,
+{"type":["check_ps"],"time":["2023-04-30 17:26:05"],"user":["Jordan Reitemeyer"],"umph":[1682868365.6718],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:26:05"],"user":["Jordan Reitemeyer"],"umph":[1682868365.7008],"ok":[false],"chunk":[13],"ex":[2],"e.ind":[0],"code":["\nsummary(reg1)\n"],"message":["evaluation error in \n  summary(reg1)\n  Error in summary(reg1): object 'reg1' not found\n"]}
+,
+{"type":["check_ps"],"time":["2023-04-30 17:27:34"],"user":["Jordan Reitemeyer"],"umph":[1682868454.215],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:27:34"],"user":["Jordan Reitemeyer"],"umph":[1682868454.2813],"ok":[true],"chunk":[13],"ex":[2],"e.ind":[0],"code":["\n2\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:27:36"],"user":["Jordan Reitemeyer"],"umph":[1682868456.4635],"ok":[true],"chunk":[14],"ex":[2],"e.ind":[0],"code":["sim.beta1 <- replicate(5000,simulate.and.estimate())\n\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:27:36"],"user":["Jordan Reitemeyer"],"umph":[1682868456.6097],"ok":[true],"chunk":[15],"ex":[2],"e.ind":[0],"code":["\nhist(sim.beta1)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:27:36"],"user":["Jordan Reitemeyer"],"umph":[1682868456.6231],"ok":[true],"chunk":[16],"ex":[2],"e.ind":[0],"code":["ggplot(mapping=aes(x=sim.beta1)) + geom_density(fill=\"blue\", alpha=0.5) + geom_vline(xintercept = 2)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:27:36"],"user":["Jordan Reitemeyer"],"umph":[1682868456.6416],"ok":[true],"chunk":[17],"ex":[2],"e.ind":[0],"code":["\nsd(sim.beta1)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:27:36"],"user":["Jordan Reitemeyer"],"umph":[1682868456.6728],"ok":[false],"chunk":[18],"ex":[2],"e.ind":[2],"code":["reg1 <-  lm(y~x)\n\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 2_e."]}
+,
+{"type":["check_ps"],"time":["2023-04-30 17:28:20"],"user":["Jordan Reitemeyer"],"umph":[1682868500.0586],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:28:20"],"user":["Jordan Reitemeyer"],"umph":[1682868500.1807],"ok":[false],"chunk":[13],"ex":[2],"e.ind":[1],"code":["\n3\n"],"message":["\nYou have not yet entered all correct commands in chunk 2_b_2."]}
+,
+{"type":["check_ps"],"time":["2023-04-30 17:28:51"],"user":["Jordan Reitemeyer"],"umph":[1682868531.0541],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:28:51"],"user":["Jordan Reitemeyer"],"umph":[1682868531.1068],"ok":[false],"chunk":[10],"ex":[2],"e.ind":[1],"code":["\n3\n"],"message":["\nYou have not yet entered all correct commands in chunk 2_a_2."]}
+,
+{"type":["hint"],"time":["2023-04-30 17:29:01"],"user":["Jordan Reitemeyer"],"umph":[1682868541.9706],"ok":[true],"chunk":[10],"ex":[2],"e.ind":[1]}
+,
+{"type":["check_ps"],"time":["2023-04-30 17:29:34"],"user":["Jordan Reitemeyer"],"umph":[1682868574.2195],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:29:34"],"user":["Jordan Reitemeyer"],"umph":[1682868574.267],"ok":[false],"chunk":[10],"ex":[2],"e.ind":[1],"code":["\n3\n"],"message":["\nYou have not yet entered all correct commands in chunk 2_a_2."]}
+,
+{"type":["check_ps"],"time":["2023-04-30 17:30:05"],"user":["Jordan Reitemeyer"],"umph":[1682868605.0736],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:30:05"],"user":["Jordan Reitemeyer"],"umph":[1682868605.1306],"ok":[true],"chunk":[10],"ex":[2],"e.ind":[0],"code":["\n2\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:30:05"],"user":["Jordan Reitemeyer"],"umph":[1682868605.1653],"ok":[true],"chunk":[11],"ex":[2],"e.ind":[0],"code":["lm(y~x)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:30:05"],"user":["Jordan Reitemeyer"],"umph":[1682868605.2031],"ok":[true],"chunk":[12],"ex":[2],"e.ind":[0],"code":["simulate.and.estimate <- function(T=20, beta0 = 10, beta1=2) {\n  u <- rnorm(T,0,3) # Normalverteilte Stoergroesse\n  x <- runif(T,0,4) # gleichverteilte x zwischen 0 und 4\n  y <- beta0 + beta1*x + u\n  # Anmerkung lm.fit lauft schneller als\n  # lm, hat aber keinen so schoenen Syntax\n  reg <- lm.fit(x=cbind(1,x),y=y)\n  coef(reg)[2]\n}\nsimulate.and.estimate()\nsimulate.and.estimate()\nsimulate.and.estimate()"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:30:05"],"user":["Jordan Reitemeyer"],"umph":[1682868605.2295],"ok":[false],"chunk":[13],"ex":[2],"e.ind":[1],"code":["\n3\n"],"message":["\nYou have not yet entered all correct commands in chunk 2_b_2."]}
+,
+{"type":["check_ps"],"time":["2023-04-30 17:31:16"],"user":["Jordan Reitemeyer"],"umph":[1682868676.9253],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:31:16"],"user":["Jordan Reitemeyer"],"umph":[1682868676.9754],"ok":[false],"chunk":[13],"ex":[2],"e.ind":[1],"code":["\n3\n"],"message":["\nYou have not yet entered all correct commands in chunk 2_b_2."]}
+,
+{"type":["check_ps"],"time":["2023-04-30 17:31:49"],"user":["Jordan Reitemeyer"],"umph":[1682868709.7558],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:31:49"],"user":["Jordan Reitemeyer"],"umph":[1682868709.8108],"ok":[false],"chunk":[13],"ex":[2],"e.ind":[1],"code":["\n3\n"],"message":["\nYou have not yet entered all correct commands in chunk 2_b_2."]}
+,
+{"type":["check_ps"],"time":["2023-04-30 17:32:37"],"user":["Jordan Reitemeyer"],"umph":[1682868757.1642],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:32:37"],"user":["Jordan Reitemeyer"],"umph":[1682868757.2607],"ok":[false],"chunk":[13],"ex":[2],"e.ind":[1],"code":["\n3\n"],"message":["\nYou have not yet entered all correct commands in chunk 2_b_2."]}
+,
+{"type":["check_ps"],"time":["2023-04-30 17:32:57"],"user":["Jordan Reitemeyer"],"umph":[1682868777.3187],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:32:57"],"user":["Jordan Reitemeyer"],"umph":[1682868777.4732],"ok":[true],"chunk":[13],"ex":[2],"e.ind":[0],"code":["\n2\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:33:00"],"user":["Jordan Reitemeyer"],"umph":[1682868780.805],"ok":[true],"chunk":[14],"ex":[2],"e.ind":[0],"code":["sim.beta1 <- replicate(5000,simulate.and.estimate())\n\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:33:01"],"user":["Jordan Reitemeyer"],"umph":[1682868781.1504],"ok":[true],"chunk":[15],"ex":[2],"e.ind":[0],"code":["\nhist(sim.beta1)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:33:01"],"user":["Jordan Reitemeyer"],"umph":[1682868781.1796],"ok":[true],"chunk":[16],"ex":[2],"e.ind":[0],"code":["ggplot(mapping=aes(x=sim.beta1)) + geom_density(fill=\"blue\", alpha=0.5) + geom_vline(xintercept = 2)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:33:01"],"user":["Jordan Reitemeyer"],"umph":[1682868781.3007],"ok":[true],"chunk":[17],"ex":[2],"e.ind":[0],"code":["\nsd(sim.beta1)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:33:01"],"user":["Jordan Reitemeyer"],"umph":[1682868781.3474],"ok":[false],"chunk":[18],"ex":[2],"e.ind":[2],"code":["reg1 <-  lm(y~x)\n\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 2_e."]}
+,
+{"type":["check_ps"],"time":["2023-04-30 17:33:44"],"user":["Jordan Reitemeyer"],"umph":[1682868824.622],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:33:44"],"user":["Jordan Reitemeyer"],"umph":[1682868824.676],"ok":[false],"chunk":[18],"ex":[2],"e.ind":[2],"code":["reg1 <-  lm(y~x)\n\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 2_e."]}
+,
+{"type":["check_ps"],"time":["2023-04-30 17:34:39"],"user":["Jordan Reitemeyer"],"umph":[1682868879.7968],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:34:39"],"user":["Jordan Reitemeyer"],"umph":[1682868879.9029],"ok":[true],"chunk":[18],"ex":[2],"e.ind":[0],"code":["reg1 <-  lm(y~x)\n\nsummary(reg1)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:34:39"],"user":["Jordan Reitemeyer"],"umph":[1682868879.9302],"ok":[false],"chunk":[19],"ex":[2],"e.ind":[1],"code":["\n# enter your code here ...\n\n\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 2_f."]}
+,
+{"type":["check_ps"],"time":["2023-04-30 17:37:22"],"user":["Jordan Reitemeyer"],"umph":[1682869042.4902],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:37:22"],"user":["Jordan Reitemeyer"],"umph":[1682869042.5438],"ok":[true],"chunk":[19],"ex":[2],"e.ind":[0],"code":["\nconfint(reg1)\nconfint(reg1, level= 0.99)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:37:22"],"user":["Jordan Reitemeyer"],"umph":[1682869042.5535],"ok":[true],"chunk":[20],"ex":[2],"e.ind":[0],"code":["ggplot(mapping = aes(x=x,y=y)) + geom_point()+ geom_smooth(method=\"lm\")"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:37:22"],"user":["Jordan Reitemeyer"],"umph":[1682869042.5667],"ok":[false],"chunk":[7],"ex":[1],"e.ind":[0],"code":["g2 <- g1 + geom_abline(intercept=b0,slope= b1,colour=\"blue\")\n\n\n\ng2"],"message":["evaluation error in \n  g2 <- g1 + geom_abline(intercept = b0, slope = b1, colour = \"blue\")\n  Error:  object 'g1' not found\n"]}
+,
+{"type":["check_ps"],"time":["2023-04-30 17:45:24"],"user":["Jordan Reitemeyer"],"umph":[1682869524.8413],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:45:24"],"user":["Jordan Reitemeyer"],"umph":[1682869524.8827],"ok":[true],"chunk":[20],"ex":[2],"e.ind":[0],"code":["ggplot(mapping = aes(x=x,y=y)) + geom_point()+ geom_smooth(method=\"lm\")\nstats()"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:45:25"],"user":["Jordan Reitemeyer"],"umph":[1682869525.1817],"ok":[true],"chunk":[21],"ex":[3],"e.ind":[0],"code":["eu_makro <- read_csv(\"./data/EU_Makro.csv\")"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:45:25"],"user":["Jordan Reitemeyer"],"umph":[1682869525.2885],"ok":[true],"chunk":[22],"ex":[3],"e.ind":[0],"code":["eu_makro <-  eu_makro %>%\n  group_by(country) %>%\n  arrange(year) %>%\n  mutate(gdp_growth = 100*(gdp - lag(gdp)) / gdp ) %>%\n  ungroup()"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:45:25"],"user":["Jordan Reitemeyer"],"umph":[1682869525.541],"ok":[false],"chunk":[23],"ex":[3],"e.ind":[1],"code":["\ndat = eu_makro %>%\n  filter(country == \"Germany\",\n         country == \"France\",\n         country == \"Netherlands\")\n"],"message":["\nYou have not made a correct assignment to dat in chunk 3_a_3."]}
+,
+{"type":["check_ps"],"time":["2023-04-30 17:46:28"],"user":["Jordan Reitemeyer"],"umph":[1682869588.0289],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:46:28"],"user":["Jordan Reitemeyer"],"umph":[1682869588.1156],"ok":[true],"chunk":[20],"ex":[2],"e.ind":[0],"code":["ggplot(mapping = aes(x=x,y=y)) + geom_point()+ geom_smooth(method=\"lm\")\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:46:28"],"user":["Jordan Reitemeyer"],"umph":[1682869588.241],"ok":[false],"chunk":[23],"ex":[3],"e.ind":[1],"code":["\ndat = eu_makro %>%\n  filter(country == \"Germany\",\n         country == \"France\",\n         country == \"Netherlands\")\n"],"message":["\nYou have not made a correct assignment to dat in chunk 3_a_3."]}
+,
+{"type":["hint"],"time":["2023-04-30 17:46:47"],"user":["Jordan Reitemeyer"],"umph":[1682869607.9659],"ok":[true],"chunk":[23],"ex":[3],"e.ind":[1]}
+,
+{"type":["check_ps"],"time":["2023-04-30 17:50:19"],"user":["Jordan Reitemeyer"],"umph":[1682869819.7363],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:50:19"],"user":["Jordan Reitemeyer"],"umph":[1682869819.9257],"ok":[true],"chunk":[23],"ex":[3],"e.ind":[0],"code":["\n\ndat = filter(eu_makro, country %in% c(\"Germany\", \"France\", \"Netherlands\"))\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:50:19"],"user":["Jordan Reitemeyer"],"umph":[1682869819.9557],"ok":[false],"chunk":[24],"ex":[3],"e.ind":[1],"code":["\n# enter your code here ...\n\n\n# enter your code here ...\n"],"message":["\nYou have not yet made an assignment to reg1 in chunk 3_a_4."]}
+,
+{"type":["check_ps"],"time":["2023-04-30 17:53:28"],"user":["Jordan Reitemeyer"],"umph":[1682870008.0761],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:53:28"],"user":["Jordan Reitemeyer"],"umph":[1682870008.1881],"ok":[false],"chunk":[24],"ex":[3],"e.ind":[1],"code":["\nreg1 <- lm(dat$gdp_growth~dat$unempl)\nsummary(reg1)\n"],"message":["\nYou have not made a correct assignment to reg1 in chunk 3_a_4."]}
+,
+{"type":["hint"],"time":["2023-04-30 17:53:59"],"user":["Jordan Reitemeyer"],"umph":[1682870039.0962],"ok":[true],"chunk":[24],"ex":[3],"e.ind":[1]}
+,
+{"type":["hint"],"time":["2023-04-30 17:54:16"],"user":["Jordan Reitemeyer"],"umph":[1682870056.6443],"ok":[true],"chunk":[24],"ex":[3],"e.ind":[1]}
+,
+{"type":["hint"],"time":["2023-04-30 17:56:25"],"user":["Jordan Reitemeyer"],"umph":[1682870185.0573],"ok":[true],"chunk":[24],"ex":[3],"e.ind":[1]}
+,
+{"type":["check_ps"],"time":["2023-04-30 17:56:42"],"user":["Jordan Reitemeyer"],"umph":[1682870202.811],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:56:42"],"user":["Jordan Reitemeyer"],"umph":[1682870202.9196],"ok":[true],"chunk":[24],"ex":[3],"e.ind":[0],"code":["\nreg1 <- lm(unempl ~gdp_growth, data = dat)\nsummary(reg1)\n\n\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:56:42"],"user":["Jordan Reitemeyer"],"umph":[1682870202.9482],"ok":[false],"chunk":[25],"ex":[3],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_a_5."]}
+,
+{"type":["check_ps"],"time":["2023-04-30 17:59:18"],"user":["Jordan Reitemeyer"],"umph":[1682870358.1086],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:59:18"],"user":["Jordan Reitemeyer"],"umph":[1682870358.2637],"ok":[true],"chunk":[25],"ex":[3],"e.ind":[0],"code":["\n1\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 17:59:18"],"user":["Jordan Reitemeyer"],"umph":[1682870358.2922],"ok":[false],"chunk":[26],"ex":[3],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_b."]}
+,
+{"type":["check_ps"],"time":["2023-04-30 18:00:49"],"user":["Jordan Reitemeyer"],"umph":[1682870449.1105],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:00:49"],"user":["Jordan Reitemeyer"],"umph":[1682870449.1983],"ok":[false],"chunk":[26],"ex":[3],"e.ind":[1],"code":["\n2\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_b."]}
+,
+{"type":["check_ps"],"time":["2023-04-30 18:01:29"],"user":["Jordan Reitemeyer"],"umph":[1682870489.0922],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:01:29"],"user":["Jordan Reitemeyer"],"umph":[1682870489.169],"ok":[false],"chunk":[26],"ex":[3],"e.ind":[1],"code":["\n1\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_b."]}
+,
+{"type":["check_ps"],"time":["2023-04-30 18:02:35"],"user":["Jordan Reitemeyer"],"umph":[1682870555.7056],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:02:35"],"user":["Jordan Reitemeyer"],"umph":[1682870555.7525],"ok":[true],"chunk":[26],"ex":[3],"e.ind":[0],"code":["\n3\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:02:35"],"user":["Jordan Reitemeyer"],"umph":[1682870555.7948],"ok":[false],"chunk":[27],"ex":[3],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_b_2."]}
+,
+{"type":["check_ps"],"time":["2023-04-30 18:05:12"],"user":["Jordan Reitemeyer"],"umph":[1682870712.6123],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:05:12"],"user":["Jordan Reitemeyer"],"umph":[1682870712.6784],"ok":[false],"chunk":[27],"ex":[3],"e.ind":[1],"code":["\nc(1,2,3)\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_b_2."]}
+,
+{"type":["check_ps"],"time":["2023-04-30 18:05:52"],"user":["Jordan Reitemeyer"],"umph":[1682870752.4014],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:05:52"],"user":["Jordan Reitemeyer"],"umph":[1682870752.483],"ok":[false],"chunk":[27],"ex":[3],"e.ind":[1],"code":["\nc(2,3)\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_b_2."]}
+,
+{"type":["check_ps"],"time":["2023-04-30 18:06:55"],"user":["Jordan Reitemeyer"],"umph":[1682870815.7301],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:06:55"],"user":["Jordan Reitemeyer"],"umph":[1682870815.8219],"ok":[true],"chunk":[27],"ex":[3],"e.ind":[0],"code":["\nc(3)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:06:57"],"user":["Jordan Reitemeyer"],"umph":[1682870817.2073],"ok":[true],"chunk":[28],"ex":[3],"e.ind":[0],"code":["reg2 <- lm(unempl~gdp_growth, data=eu_makro)\nstargazer(type = \"text\", reg2 ,  single.row = TRUE, header = FALSE, digits=2)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:06:57"],"user":["Jordan Reitemeyer"],"umph":[1682870817.2531],"ok":[false],"chunk":[29],"ex":[3],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_c_2."]}
+,
+{"type":["check_ps"],"time":["2023-04-30 18:09:56"],"user":["Jordan Reitemeyer"],"umph":[1682870996.3069],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:09:56"],"user":["Jordan Reitemeyer"],"umph":[1682870996.4669],"ok":[true],"chunk":[29],"ex":[3],"e.ind":[0],"code":["\n3\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:09:56"],"user":["Jordan Reitemeyer"],"umph":[1682870996.4961],"ok":[false],"chunk":[30],"ex":[3],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_d."]}
+,
+{"type":["check_ps"],"time":["2023-04-30 18:11:52"],"user":["Jordan Reitemeyer"],"umph":[1682871112.4572],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:11:52"],"user":["Jordan Reitemeyer"],"umph":[1682871112.543],"ok":[false],"chunk":[30],"ex":[3],"e.ind":[1],"code":["\n1\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_d."]}
+,
+{"type":["check_ps"],"time":["2023-04-30 18:12:36"],"user":["Jordan Reitemeyer"],"umph":[1682871156.7933],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:12:36"],"user":["Jordan Reitemeyer"],"umph":[1682871156.8593],"ok":[false],"chunk":[30],"ex":[3],"e.ind":[1],"code":["\n2\n\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_d."]}
+,
+{"type":["check_ps"],"time":["2023-04-30 18:13:24"],"user":["Jordan Reitemeyer"],"umph":[1682871204.8409],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:13:24"],"user":["Jordan Reitemeyer"],"umph":[1682871204.9241],"ok":[false],"chunk":[30],"ex":[3],"e.ind":[1],"code":["\n3\n\n"],"message":["\nYou have not yet entered all correct commands in chunk 3_d."]}
+,
+{"type":["check_ps"],"time":["2023-04-30 18:13:55"],"user":["Jordan Reitemeyer"],"umph":[1682871235.8535],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:13:55"],"user":["Jordan Reitemeyer"],"umph":[1682871235.9468],"ok":[true],"chunk":[30],"ex":[3],"e.ind":[0],"code":["\n4\n\n\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:13:56"],"user":["Jordan Reitemeyer"],"umph":[1682871236.02],"ok":[false],"chunk":[7],"ex":[1],"e.ind":[0],"code":["g2 <- g1 + geom_abline(intercept=b0,slope= b1,colour=\"blue\")\n\n\n\ng2"],"message":["evaluation error in \n  g2 <- g1 + geom_abline(intercept = b0, slope = b1, colour = \"blue\")\n  Error:  object 'g1' not found\n"]}
+,
+{"type":["check_ps"],"time":["2023-04-30 18:18:19"],"user":["Jordan Reitemeyer"],"umph":[1682871499.4131],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:18:19"],"user":["Jordan Reitemeyer"],"umph":[1682871499.6296],"ok":[true],"chunk":[31],"ex":[4],"e.ind":[0],"code":["pwt <- readRDS(\"./data/pwt_2014.rds\")\nhead(pwt)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:18:19"],"user":["Jordan Reitemeyer"],"umph":[1682871499.6945],"ok":[false],"chunk":[32],"ex":[4],"e.ind":[1],"code":["reg1 <- lm(k~bip, data = pwt)\nsummary(reg1)\n\n"],"message":["\nYou have not made a correct assignment to reg1 in chunk 4_b."]}
+,
+{"type":["hint"],"time":["2023-04-30 18:19:27"],"user":["Jordan Reitemeyer"],"umph":[1682871567.4164],"ok":[true],"chunk":[32],"ex":[4],"e.ind":[1]}
+,
+{"type":["check_ps"],"time":["2023-04-30 18:20:45"],"user":["Jordan Reitemeyer"],"umph":[1682871645.2407],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:20:45"],"user":["Jordan Reitemeyer"],"umph":[1682871645.4316],"ok":[true],"chunk":[31],"ex":[4],"e.ind":[0],"code":["pwt <- readRDS(\"./data/pwt_2014.rds\")\nhead(pwt)\n\nreg1 = lm(formula = k ~ bip, data = pwt)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:20:45"],"user":["Jordan Reitemeyer"],"umph":[1682871645.5173],"ok":[false],"chunk":[32],"ex":[4],"e.ind":[1],"code":["\nreg1 <- lm(k~bip, data = pwt)\nsummary(reg1)\n\n"],"message":["\nYou have not made a correct assignment to reg1 in chunk 4_b."]}
+,
+{"type":["hint"],"time":["2023-04-30 18:21:55"],"user":["Jordan Reitemeyer"],"umph":[1682871715.4789],"ok":[true],"chunk":[32],"ex":[4],"e.ind":[1]}
+,
+{"type":["check_ps"],"time":["2023-04-30 18:22:38"],"user":["Jordan Reitemeyer"],"umph":[1682871758.7499],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:22:38"],"user":["Jordan Reitemeyer"],"umph":[1682871758.9791],"ok":[true],"chunk":[31],"ex":[4],"e.ind":[0],"code":["pwt <- readRDS(\"./data/pwt_2014.rds\")\nhead(pwt)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:22:39"],"user":["Jordan Reitemeyer"],"umph":[1682871759.0408],"ok":[true],"chunk":[32],"ex":[4],"e.ind":[0],"code":["\nreg1 <- lm(bip~k, data = pwt)\nsummary(reg1)\n\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:22:39"],"user":["Jordan Reitemeyer"],"umph":[1682871759.0743],"ok":[false],"chunk":[33],"ex":[4],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 4_b_2."]}
+,
+{"type":["check_ps"],"time":["2023-04-30 18:25:32"],"user":["Jordan Reitemeyer"],"umph":[1682871932.9853],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:25:33"],"user":["Jordan Reitemeyer"],"umph":[1682871933.0695],"ok":[false],"chunk":[32],"ex":[4],"e.ind":[1],"code":["\nreg1 <- lm(bip, data = pwt)\nsummary(reg1)\n\n"],"message":["\nYou have not made a correct assignment to reg1 in chunk 4_b."]}
+,
+{"type":["check_ps"],"time":["2023-04-30 18:27:00"],"user":["Jordan Reitemeyer"],"umph":[1682872020.463],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:27:00"],"user":["Jordan Reitemeyer"],"umph":[1682872020.5682],"ok":[true],"chunk":[32],"ex":[4],"e.ind":[0],"code":["\nreg1 <- lm(bip~k, data = pwt)\nsummary(reg1)\n\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:27:00"],"user":["Jordan Reitemeyer"],"umph":[1682872020.6034],"ok":[false],"chunk":[33],"ex":[4],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet entered all correct commands in chunk 4_b_2."]}
+,
+{"type":["check_ps"],"time":["2023-04-30 18:28:30"],"user":["Jordan Reitemeyer"],"umph":[1682872110.0628],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:28:30"],"user":["Jordan Reitemeyer"],"umph":[1682872110.1487],"ok":[false],"chunk":[33],"ex":[4],"e.ind":[1],"code":["\n1\n"],"message":["\nYou have not yet entered all correct commands in chunk 4_b_2."]}
+,
+{"type":["check_ps"],"time":["2023-04-30 18:29:05"],"user":["Jordan Reitemeyer"],"umph":[1682872145.3931],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:29:05"],"user":["Jordan Reitemeyer"],"umph":[1682872145.4642],"ok":[true],"chunk":[33],"ex":[4],"e.ind":[0],"code":["\n2\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:29:05"],"user":["Jordan Reitemeyer"],"umph":[1682872145.4952],"ok":[true],"chunk":[34],"ex":[4],"e.ind":[0],"code":["ggplot(pwt,aes(x=k,y=bip, label=isocode)) + geom_text() + geom_smooth(method=\"lm\")"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:29:05"],"user":["Jordan Reitemeyer"],"umph":[1682872145.5321],"ok":[false],"chunk":[35],"ex":[4],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet made an assignment to pwt in chunk 4_d."]}
+,
+{"type":["hint"],"time":["2023-04-30 18:30:18"],"user":["Jordan Reitemeyer"],"umph":[1682872218.4774],"ok":[true],"chunk":[35],"ex":[4],"e.ind":[1]}
+,
+{"type":["check_ps"],"time":["2023-04-30 18:30:37"],"user":["Jordan Reitemeyer"],"umph":[1682872237.0787],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:30:37"],"user":["Jordan Reitemeyer"],"umph":[1682872237.1663],"ok":[false],"chunk":[35],"ex":[4],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet made an assignment to pwt in chunk 4_d."]}
+,
+{"type":["check_ps"],"time":["2023-04-30 18:32:22"],"user":["Jordan Reitemeyer"],"umph":[1682872342.8505],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:32:22"],"user":["Jordan Reitemeyer"],"umph":[1682872342.9314],"ok":[false],"chunk":[35],"ex":[4],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet made an assignment to pwt in chunk 4_d."]}
+,
+{"type":["check_ps"],"time":["2023-04-30 18:32:38"],"user":["Jordan Reitemeyer"],"umph":[1682872358.0767],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:32:38"],"user":["Jordan Reitemeyer"],"umph":[1682872358.1914],"ok":[false],"chunk":[35],"ex":[4],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet made an assignment to pwt in chunk 4_d."]}
+,
+{"type":["grade_ps"],"time":["2023-04-30 18:33:51"],"user":["Jordan Reitemeyer"],"umph":[1682872431.3864],"ok":[true]}
+,
+{"type":["init_ps"],"time":["2023-04-30 18:33:51"],"user":["Jordan Reitemeyer"],"umph":[1682872431.4937],"ok":[true]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:33:51"],"user":["Jordan Reitemeyer"],"umph":[1682872431.5532],"ok":[true],"chunk":[1],"ex":[1],"e.ind":[0],"code":["library(stargazer)\nlibrary(readr)\nlibrary(\"dplyr\")\nlibrary(\"ggplot2\")\nlibrary(\"tidyverse\")\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:33:52"],"user":["Jordan Reitemeyer"],"umph":[1682872432.4759],"ok":[true],"chunk":[2],"ex":[1],"e.ind":[0],"code":["\n eu_makro <- read_csv(\"data/EU_Makro.csv\")\n\n\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:33:53"],"user":["Jordan Reitemeyer"],"umph":[1682872433.9282],"ok":[true],"chunk":[3],"ex":[1],"e.ind":[0],"code":["\neu_makro <- eu_makro %>%\n  mutate( debt_share_country_pro = debt_share_country * 100)\n  \ng1 <- eu_makro %>%\n  ggplot(aes(x = debt_share_country_pro, y = unempl)) + geom_point() + \n  xlab(\"Verschuldungsquote in %\") +\n  ylab(\"Arbeitslosenquote in %\")\ng1\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:33:53"],"user":["Jordan Reitemeyer"],"umph":[1682872433.991],"ok":[true],"chunk":[4],"ex":[1],"e.ind":[0],"code":["reg1 <- lm(unempl~debt_share_country_pro, data=eu_makro)\nsummary(reg1)\n\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:33:54"],"user":["Jordan Reitemeyer"],"umph":[1682872434.0102],"ok":[true],"chunk":[5],"ex":[1],"e.ind":[0],"code":["# sreg1 <- summary(reg1)\n# sreg1$coefficients[1][1] # beta0 ellegantere Lösung\n\n6.895\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:33:54"],"user":["Jordan Reitemeyer"],"umph":[1682872434.0815],"ok":[true],"chunk":[6],"ex":[1],"e.ind":[0],"code":["coef(reg1)\n\nb0 <- coef(reg1)[1]\nb1 <- coef(reg1)[2]\n\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:33:55"],"user":["Jordan Reitemeyer"],"umph":[1682872435.2021],"ok":[true],"chunk":[7],"ex":[1],"e.ind":[0],"code":["g2 <- g1 + geom_abline(intercept=b0,slope= b1,colour=\"blue\")\n\n\n\ng2"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:33:55"],"user":["Jordan Reitemeyer"],"umph":[1682872435.2197],"ok":[true],"chunk":[8],"ex":[1],"e.ind":[0],"code":["cor(eu_makro$debt_share_country_pro,eu_makro$unempl, use = \"pairwise.complete.obs\")\n\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:33:56"],"user":["Jordan Reitemeyer"],"umph":[1682872436.5291],"ok":[true],"chunk":[9],"ex":[2],"e.ind":[0],"code":["set.seed(1)\nT <-  20 # Zahl der Beobachtungen\nbeta0 <- 10; beta1 <- 2;\nu <- rnorm(T,0,3) # Normalverteilte Stoergroesse\nu\nx <- runif(T,0,4) # gleichverteilte x zwischen 0 und 4\nx\ny <- beta0 + beta1*x + u\ny"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:33:56"],"user":["Jordan Reitemeyer"],"umph":[1682872436.5682],"ok":[true],"chunk":[10],"ex":[2],"e.ind":[0],"code":["\n2\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:33:56"],"user":["Jordan Reitemeyer"],"umph":[1682872436.6132],"ok":[true],"chunk":[11],"ex":[2],"e.ind":[0],"code":["lm(y~x)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:33:56"],"user":["Jordan Reitemeyer"],"umph":[1682872436.6423],"ok":[true],"chunk":[12],"ex":[2],"e.ind":[0],"code":["simulate.and.estimate <- function(T=20, beta0 = 10, beta1=2) {\n  u <- rnorm(T,0,3) # Normalverteilte Stoergroesse\n  x <- runif(T,0,4) # gleichverteilte x zwischen 0 und 4\n  y <- beta0 + beta1*x + u\n  # Anmerkung lm.fit lauft schneller als\n  # lm, hat aber keinen so schoenen Syntax\n  reg <- lm.fit(x=cbind(1,x),y=y)\n  coef(reg)[2]\n}\nsimulate.and.estimate()\nsimulate.and.estimate()\nsimulate.and.estimate()"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:33:56"],"user":["Jordan Reitemeyer"],"umph":[1682872436.6715],"ok":[true],"chunk":[13],"ex":[2],"e.ind":[0],"code":["\n2\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:33:59"],"user":["Jordan Reitemeyer"],"umph":[1682872439.6994],"ok":[true],"chunk":[14],"ex":[2],"e.ind":[0],"code":["sim.beta1 <- replicate(5000,simulate.and.estimate())\n\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:33:59"],"user":["Jordan Reitemeyer"],"umph":[1682872439.9238],"ok":[true],"chunk":[15],"ex":[2],"e.ind":[0],"code":["\nhist(sim.beta1)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:34:01"],"user":["Jordan Reitemeyer"],"umph":[1682872441.163],"ok":[true],"chunk":[16],"ex":[2],"e.ind":[0],"code":["ggplot(mapping=aes(x=sim.beta1)) + geom_density(fill=\"blue\", alpha=0.5) + geom_vline(xintercept = 2)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:34:01"],"user":["Jordan Reitemeyer"],"umph":[1682872441.1988],"ok":[true],"chunk":[17],"ex":[2],"e.ind":[0],"code":["\nsd(sim.beta1)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:34:01"],"user":["Jordan Reitemeyer"],"umph":[1682872441.2486],"ok":[true],"chunk":[18],"ex":[2],"e.ind":[0],"code":["reg1 <-  lm(y~x)\n\nsummary(reg1)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:34:01"],"user":["Jordan Reitemeyer"],"umph":[1682872441.2913],"ok":[true],"chunk":[19],"ex":[2],"e.ind":[0],"code":["\nconfint(reg1)\nconfint(reg1, level= 0.99)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:34:02"],"user":["Jordan Reitemeyer"],"umph":[1682872442.3623],"ok":[true],"chunk":[20],"ex":[2],"e.ind":[0],"code":["ggplot(mapping = aes(x=x,y=y)) + geom_point()+ geom_smooth(method=\"lm\")\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:34:03"],"user":["Jordan Reitemeyer"],"umph":[1682872443.717],"ok":[true],"chunk":[21],"ex":[3],"e.ind":[0],"code":["eu_makro <- read_csv(\"./data/EU_Makro.csv\")"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:34:03"],"user":["Jordan Reitemeyer"],"umph":[1682872443.8216],"ok":[true],"chunk":[22],"ex":[3],"e.ind":[0],"code":["eu_makro <-  eu_makro %>%\n  group_by(country) %>%\n  arrange(year) %>%\n  mutate(gdp_growth = 100*(gdp - lag(gdp)) / gdp ) %>%\n  ungroup()"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:34:03"],"user":["Jordan Reitemeyer"],"umph":[1682872443.9119],"ok":[true],"chunk":[23],"ex":[3],"e.ind":[0],"code":["\n\ndat = filter(eu_makro, country %in% c(\"Germany\", \"France\", \"Netherlands\"))\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:34:03"],"user":["Jordan Reitemeyer"],"umph":[1682872443.9503],"ok":[true],"chunk":[24],"ex":[3],"e.ind":[0],"code":["\nreg1 <- lm(unempl ~gdp_growth, data = dat)\nsummary(reg1)\n\n\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:34:03"],"user":["Jordan Reitemeyer"],"umph":[1682872443.9675],"ok":[true],"chunk":[25],"ex":[3],"e.ind":[0],"code":["\n1\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:34:03"],"user":["Jordan Reitemeyer"],"umph":[1682872443.9927],"ok":[true],"chunk":[26],"ex":[3],"e.ind":[0],"code":["\n3\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:34:04"],"user":["Jordan Reitemeyer"],"umph":[1682872444.0102],"ok":[true],"chunk":[27],"ex":[3],"e.ind":[0],"code":["\nc(3)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:34:04"],"user":["Jordan Reitemeyer"],"umph":[1682872444.7835],"ok":[true],"chunk":[28],"ex":[3],"e.ind":[0],"code":["reg2 <- lm(unempl~gdp_growth, data=eu_makro)\nstargazer(type = \"text\", reg2 ,  single.row = TRUE, header = FALSE, digits=2)"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:34:04"],"user":["Jordan Reitemeyer"],"umph":[1682872444.818],"ok":[true],"chunk":[29],"ex":[3],"e.ind":[0],"code":["\n3\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:34:04"],"user":["Jordan Reitemeyer"],"umph":[1682872444.847],"ok":[true],"chunk":[30],"ex":[3],"e.ind":[0],"code":["\n4\n\n\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:34:04"],"user":["Jordan Reitemeyer"],"umph":[1682872444.9836],"ok":[true],"chunk":[31],"ex":[4],"e.ind":[0],"code":["pwt <- readRDS(\"./data/pwt_2014.rds\")\nhead(pwt)\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:34:05"],"user":["Jordan Reitemeyer"],"umph":[1682872445.0735],"ok":[true],"chunk":[32],"ex":[4],"e.ind":[0],"code":["\nreg1 <- lm(bip~k, data = pwt)\nsummary(reg1)\n\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:34:05"],"user":["Jordan Reitemeyer"],"umph":[1682872445.0982],"ok":[true],"chunk":[33],"ex":[4],"e.ind":[0],"code":["\n2\n"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:34:06"],"user":["Jordan Reitemeyer"],"umph":[1682872446.4691],"ok":[true],"chunk":[34],"ex":[4],"e.ind":[0],"code":["ggplot(pwt,aes(x=k,y=bip, label=isocode)) + geom_text() + geom_smooth(method=\"lm\")"],"message":[""]}
+,
+{"type":["check_chunk"],"time":["2023-04-30 18:34:06"],"user":["Jordan Reitemeyer"],"umph":[1682872446.4945],"ok":[false],"chunk":[35],"ex":[4],"e.ind":[1],"code":["\n# enter your code here ...\n"],"message":["\nYou have not yet made an assignment to pwt in chunk 4_d."]}
+,
+{"type":["check_ps"],"time":["2023-05-02 14:12:44"],"user":["Jordan Reitemeyer"],"umph":[1683029564.156],"ok":[true]}
+,
